@@ -13,7 +13,9 @@ export class OverEnlacesDirective {
   constructor(private el: ElementRef) { }
 
   @HostListener('mouseover') onMouseOver(){
-    this.ishovering = true;
+    if(this.el.nativeElement.tagName === 'A'){
+      this.ishovering = true;
+    }
   }
   
   @HostListener('mouseout') onMouseOut() {
