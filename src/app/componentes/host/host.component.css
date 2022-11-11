@@ -1,8 +1,56 @@
-.upperCaseVerde{
-    color: hotpink;
-    border: hotpink solid 1px;
+.upperCase{
     border-radius: 5px;
     box-shadow: 5px 5px rgba(0, 0, 0, 0.35) ;
     width: fit-content;
     padding: 5px 5px 5px 5px;
+}
+
+.hotpink{
+    color: hotpink;
+    border: hotpink solid 1px;
+}
+
+.green{
+    color: green;
+    border: green solid 1px;
+}
+
+.yellow{
+    color: yellow;
+    border: yellow solid 1px;
+}
+
+.red{
+    color: red;
+    border: red solid 1px;
+}
+
+.blue{
+    color: blue;
+    border: blue solid 1px;
+}
+
+.orange{
+    color: orange;
+    border: orange solid 1px;
+}
+
+.black{
+    color: black;
+    border: black solid 1px;
+}
+
+.violet{
+    color: violet;
+    border: violet solid 1px;
+}
+
+.grey{
+    color: grey;
+    border: grey solid 1px;
+}
+
+.brown{
+    color: brown;
+    border: brown solid 1px;
 }

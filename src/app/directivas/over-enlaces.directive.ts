@@ -6,26 +6,27 @@ import { Directive, ElementRef, HostBinding, HostListener, Input } from '@angula
 })
 export class OverEnlacesDirective {
 
-  @HostBinding('class.upperCaseVerde') private ishovering!: boolean;
+  @HostBinding('class.upperCase') private ishovering!: boolean;
 
   @Input('pmOverEnlaces') config = {
     texto: "texto predeterminado",
     color: "hotpink"
   };
 
-  cadena: String = "";
+  private txtAnterior!: String
 
   constructor(private el: ElementRef) { }
 
   @HostListener('mouseover') onMouseOver(){
-    this.el.nativeElement.innerHTML = this.el.nativeElement.innerHTML.toUpperCase();
+    this.txtAnterior = this.el.nativeElement.innerHTML;
+    this.el.nativeElement.innerHTML = this.config.texto.toUpperCase();
+    this.el.nativeElement.className = this.config.color;
     this.ishovering = true;
-    console.log(this.config.texto);
-    console.log(this.config.color);
   }
   
   @HostListener('mouseout') onMouseOut() {
-    this.el.nativeElement.innerHTML = this.el.nativeElement.innerHTML.toLowerCase();
+    this.el.nativeElement.innerHTML = this.txtAnterior.toLowerCase();
+    this.el.nativeElement.className = "";
     this.ishovering = false;
   }
 
