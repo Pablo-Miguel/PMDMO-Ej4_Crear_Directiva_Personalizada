@@ -1,5 +1,8 @@
 .upperCaseVerde{
-    text-transform: uppercase;
-    color: green;
-    border: green solid 1px
+    color: hotpink;
+    border: hotpink solid 1px;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.35) ;
+    width: fit-content;
+    padding: 5px 5px 5px 5px;
 }
