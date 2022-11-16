@@ -6,7 +6,7 @@ import { Directive, ElementRef, HostBinding, HostListener, Input } from '@angula
 })
 export class OverEnlacesDirective {
 
-  @HostBinding('class.upperCase') private ishovering!: boolean;
+  @HostBinding('class.estiloSombras') private ishovering!: boolean;
 
   @Input('pmOverEnlaces') config = {
     texto: "texto predeterminado",
@@ -26,7 +26,8 @@ export class OverEnlacesDirective {
   
   @HostListener('mouseout') onMouseOut() {
     this.el.nativeElement.innerHTML = this.txtAnterior.toLowerCase();
-    this.el.nativeElement.className = "";
+    this.el.nativeElement.classList.remove("estiloSombras");
+    this.el.nativeElement.classList.remove(this.config.color);
     this.ishovering = false;
   }
 
